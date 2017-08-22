@@ -1,0 +1,255 @@
+.landing {
+    overflow-x: hidden;
+    .landing-background {
+        position: relative;
+        z-index: 1;
+
+        background-color: $light_grey;
+    }
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .container {
+        @media (min-width: 1460px) {
+            width: 1400px;
+        }
+    }
+    .jumbotron {
+        position: relative;
+        z-index: 1;
+
+        height: 550px;
+        @media (max-width: 768px) {
+            height: 440px;
+        }
+        .titles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+            h1,
+            h2 {
+                text-align: center;
+
+                color: $white;
+            }
+            h1 {
+                margin-top: 0;
+                margin-bottom: 15px;
+
+                line-height: 66px;
+                @media (max-width: 768px) {
+                    line-height: 44px;
+                }
+            }
+            h2 {
+                margin-top: 0;
+
+                font-size: 12px;
+                font-weight: $semibold;
+                line-height: 22px;
+
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .share-buttons {
+        margin-top: 90px;
+        ul {
+            padding: 0;
+            margin: 0;
+
+            list-style-type: none;
+
+            text-align: center;
+        }
+    }
+    article {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        @media (max-width: 768px) {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+        .side-image {
+            position: absolute;
+            top: 550px;
+        }
+        h2,
+        h3,
+        h4 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            font-weight: $semibold;
+            font-weight: 600;
+
+            color: #140b1f;
+        }
+        h2 {
+            font-size: 48px;
+        }
+        h3 {
+            font-size: 24px;
+        }
+        h4 {
+            margin-bottom: 0;
+
+            font-size: 18px;
+        }
+        p {
+            margin: 0;
+
+            font-size: 18px;
+            line-height: 34px;
+
+            color: #635e6b;
+        }
+        footer {
+            z-index: auto;
+
+            padding-top: 125px;
+            padding-bottom: 0 !important;
+
+            background-color: transparent;
+            @media (max-width: 768px) {
+                padding-top: 30px;
+            }
+            h2 {
+                margin-top: 0;
+                margin-bottom: 20px;
+
+                font-weight: $bold;
+                @media (max-width: 768px) {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+            }
+            .contact-section {
+                padding-top: 30px;
+                @media (max-width: 768px) {
+                    line-height: 40px;
+                }
+                a {
+                    font-size: 24px;
+                    font-weight: 600;
+
+                    text-decoration: none;
+
+                    color: $dark_background;
+                }
+            }
+        }
+    }
+    .bottom {
+        z-index: 0;
+    }
+    .landing-instagram {
+        z-index: 1;
+
+        padding: 0 !important;
+
+        background: transparent !important;
+        section {
+            figure {
+                height: 600px !important;
+                margin: 0 !important;
+                @media (max-width: 768px) {
+                    width: 80%;
+                    height: auto !important;
+                }
+                img {
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    #landing_slider {
+        margin-bottom: 90px;
+        .title {
+            h2 {
+                margin-top: 80px;
+
+                font-size: 48px;
+                @media (max-width: 768px) {
+                    margin-top: 0;
+
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+            }
+        }
+        .slide {
+            figure {
+                position: relative;
+
+                width: 100%;
+                height: 420px;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 30px;
+                overflow: hidden;
+
+                transition: .3s;
+
+                box-shadow: 0 30px 40px 0 rgba(0,0,0,.3);
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: cover;
+                }
+                &:hover {
+                    transform: translate(0, -30px);
+                }
+                a {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    background: rgba(0,0,0,.3);
+                    background:    -moz-linear-gradient(top,  rgba(0,0,0,.2) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top,  rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background:         linear-gradient(to bottom,  rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+                    filter: progid:dximagetransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#000000",GradientType=0 ); /* IE6-9 */
+                }
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 100%;
+                    padding: 15px;
+
+                    background-color: $white;
+                    h4 {
+                        margin: 0;
+
+                        font-size: 16px;
+
+                        color: #140b1f;
+                    }
+                    h5 {
+                        margin: 0;
+
+                        font-size: 14px;
+
+                        color: #898590;
+                    }
+                }
+            }
+        }
+    }
+}

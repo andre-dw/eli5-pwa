@@ -1,0 +1,353 @@
+.comming {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10005;
+	min-height: 100vh;
+	padding-top: 150px;
+
+	@media only screen and (max-width: $mobile) {
+		overflow: scroll;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 50px;
+	}
+
+	article {
+		@media only screen and (max-width: $mobile) {
+			padding: 0;
+		}
+
+		.header {
+			position: relative;
+
+			@media only screen and (max-width: $mobile) {
+				padding-top: 50px;
+			}
+
+			.close-button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				border: none;
+				background: none;
+				outline: none;
+
+				@media only screen and (max-width: $tablet) {
+					right: -30px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					right: 0;
+				}
+			}
+			h1 {
+				margin: 0;
+				margin-bottom: 10px;
+
+				img {
+					height: 50px;
+					display: inline-block;
+					vertical-align: text-top;
+					margin-left: 10px;
+
+					@media only screen and (max-width: $tablet) {
+						height: 35px;
+						vertical-align: text-bottom;
+					}
+				}
+			}
+			h2 {
+				margin: 0;
+				margin-bottom: 100px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 50px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		form {
+			padding: 0;
+			p {
+				margin: 0;
+				margin-bottom: 20px;
+
+				@media only screen and (max-width: $mobile) {
+					padding: 0;
+				}
+
+				&.error {
+					label {
+						input {
+							border-color: #ff667b;
+						}
+					}
+				}
+
+				label {
+					font-size: $text_size_mobile;
+					font-weight: $regular;
+					color: $text_grey;
+					margin: 0;
+					width: 100%;
+					position: relative;
+
+					span {
+						position: absolute;
+						left: 0;
+						bottom: -15px;
+						line-height: 0;
+						color: #ff667b;
+					}
+
+					input, textarea {
+						display: block;
+						width: 100%;
+						height: 60px;
+						border: 1px solid #8E8D91;
+						border-radius: 2px;
+						margin-top: 10px;
+						text-indent: 20px;
+						outline: none;
+						font-size: $text_size_mobile;
+
+						::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						  color: #8E8D91;
+						  font-weight: $regular;
+						}
+						::-moz-placeholder { /* Firefox 19+ */
+						  color: #8E8D91;
+						  font-weight: $regular;
+						}
+						:-ms-input-placeholder { /* IE 10+ */
+						  color: #8E8D91;
+						  font-weight: $regular;
+						}
+						:-moz-placeholder { /* Firefox 18- */
+						  color: #8E8D91;
+						  font-weight: $regular;
+						}
+					}
+
+					textarea {
+						height: 150px;
+						text-indent: 0;
+						padding: 15px 20px;
+					}
+				}
+
+				button[type="submit"] {
+					background: none;
+					border: none;
+					color: $link_color;
+					font-weight: $semibold;
+					margin: 0 auto;
+					display: block;
+					margin-top: 100px;
+					outline: none;
+					position: relative;
+
+					&:after {
+						display: inline-block;
+						vertical-align: bottom;
+						position: absolute;
+						right: -20px;
+						content: url('/img/icons/purple/arrow-right.svg');
+					}
+
+					&:hover {
+						&:after {
+							animation: arrow .5s infinite;
+						}
+					}
+
+					@media only screen and (max-width: $tablet) {
+						margin-top: 30px;
+					}
+				}
+
+				&.buttons {
+					label {
+						.button-wrapper {
+							display: block;
+							margin-top: 10px;
+
+							button {
+								display: inline-block;
+								width: 48%;
+								height: 60px;
+								border: 1px solid #8E8D91;
+								border-radius: 2px;
+								color: #8E8D91;
+								text-align: center;
+								font-size: $text_size_mobile;
+								font-weight: $regular;
+								background-color: $white;
+								outline: none;
+								transition: $transition_time;
+
+								&.active, &:hover {
+									border-color: $link_color;
+									background-color: rgba($link_color, 0.1);
+									color: $link_color;
+									font-weight: $semibold;
+								}
+
+								&:first-of-type {
+									float: left;
+								}
+								&:last-of-type {
+									float: right;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.success {
+		min-height: 100vh;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		z-index: 10006;
+
+		.success-wrapper {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				top: 40%;
+			}
+
+			>img {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				margin-bottom: 25px;
+			}
+			h1 {
+				margin: 0;
+				margin-bottom: 15px;
+				text-align: center;
+
+				img {
+					margin-left: 10px;
+					height: 50px;
+					display: inline-block;
+					vertical-align: text-top;
+
+					@media only screen and (max-width: $mobile) {
+						height: 35px;
+						vertical-align: text-bottom;
+					}
+				}
+			}
+			h2 {
+				margin: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+.sorry {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10005;
+	min-height: 100vh;
+	padding-top: 150px;
+
+	@media only screen and (max-width: $mobile) {
+		padding-top: 50px;
+	}
+
+	.close-button {
+		position: absolute;
+		top: 150px;
+		right: 12%;
+		background: none;
+		border: none;
+		padding: 0;
+		outline: none;
+		z-index: 1;
+
+		@media only screen and (max-width: $mobile) {
+			top: 100px;
+			right: 15px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			top: 75px;
+		}
+	}
+
+	.success-wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 50%;
+
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			padding: 0px 15px;
+		}
+
+		>img {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 25px;
+
+			@media only screen and (max-width: 320px) {
+				margin-top: 50px;
+			}
+		}
+		h1 {
+			margin: 0;
+			margin-bottom: 15px;
+			text-align: center;
+
+			img {
+				margin-left: 10px;
+				height: 50px;
+				display: inline-block;
+				vertical-align: text-top;
+
+				@media only screen and (max-width: $mobile) {
+					height: 35px;
+
+					vertical-align: text-bottom;
+				}
+			}
+		}
+		h2 {
+			margin: 0;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		p {
+			font-weight: $semibold;
+			font-size: 14px;
+			margin: 0;
+			text-align: center;
+			color: $black;
+		}
+	}
+}

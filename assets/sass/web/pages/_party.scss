@@ -1,0 +1,126 @@
+.party-wrapper {
+	height: 100vh;
+
+	@media only screen and (max-width: $mobile) {
+		height: auto;
+	}
+	.party {
+		position: relative;
+		height: 100%;
+		.choices {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 35%;
+
+			@media only screen and (max-width: $tablet) {
+				width: 80%;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding: 0px 15px;
+				position: relative;
+		    top: auto;
+		    transform: none;
+		    left: auto;
+		    padding-top: 100px;
+		    padding-bottom: 50px;
+			}
+			.header {
+				.icon-wrapper {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					width: 300px;
+					margin: 0 auto;
+
+					img {
+						margin-bottom: 35px;
+						height: 50px;
+					}
+
+					@media only screen and (max-width: $mobile) {
+						img {
+							height: 40px;
+							margin-bottom: 20px;
+						}
+					}
+				}
+				h2 {
+					margin: 0;
+					margin-bottom: 10px;
+					font-size: $h1;
+					font-weight: $bold;
+					line-height: $h1_line;
+
+					@media only screen and (max-width: $mobile) {
+						font-size: $h1_mobile;
+					}
+				}
+				h3 {
+					margin: 0;
+					margin-bottom: 60px;
+					font-size: $h2;
+					font-weight: $semibold;
+					line-height: $h2_line;
+
+					@media only screen and (max-width: $mobile) {
+						font-size: $h3_mobile;
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+		.buttons {
+			button {
+				width: 100%;
+				display: block;
+				height: 55px;
+				background: none;
+				border: none;
+				padding: 0;
+				margin: 0;
+				margin-bottom: 20px;
+				border: 1.9px solid $link_color;
+				border-radius: 5px;
+				background-color: $white;
+				color: $link_color;
+				text-align: left;
+				text-indent: 75px;
+				font-size: $menu_text;
+				font-weight: $bold;
+				position: relative;
+				transition: $transition_time;
+				outline: none;
+				&:hover {
+					transform: scale(1.03);
+				}
+				.emoji {
+					position: absolute;
+					left: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				.arrow {
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				@media only screen and (max-width: $mobile) {
+					text-indent: 0;
+					text-align: center;
+					margin-bottom: 30px;
+				}
+
+				@media only screen and (max-width: 320px) {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.error-message-wrapper, .success-message-wrapper {
+	margin-bottom: 30px;
+
+	.error-message-container, .success-message-container {
+		background-color: #f8d0c8;
+		padding: 20px;
+		padding-left: 55px;
+		border-radius: 5px;
+		position: relative;
+
+		svg {
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			g {
+				fill: #3a3a3a;
+			}
+		}
+
+		.error-message-title, .success-message-title {
+			margin: 0;
+			color: #3a3a3a;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 24px;
+			display: inline-block;
+		}
+		.error-message-content, .success-message-content {
+			margin: 0;
+			color: #3a3a3a;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20px;
+			display: inline-block;
+		}
+	}
+}
+
+.success-message-wrapper {
+	.success-message-container {
+		background-color: #41CF81;
+
+		svg {
+			g {
+				fill: #fff;
+			}
+		}
+
+		.success-message-title, .success-message-content {
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+#noscript {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: $black;
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%,-50%);
+        img {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+        p {
+            margin: 20px auto 0;
+
+            text-align: center;
+
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+#social {
+    position: fixed;
+    top: 50%;
+    right: 5px;
+
+    transition: .3s ease-in-out;
+    transform: translateY(-50%);
+
+
+    @media only screen and(max-width: $tablet) {
+        display: none;
+    }
+    &.hide-social {
+        right: - 50px;
+    }
+    .social-buttons {
+        width: 100%;
+
+        button {
+            display: block;
+            width: 50px;
+            margin: 20px auto 0;
+
+            text-align: center;
+
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+
+            appearance: none;
+            @media only screen and(max-width: $tablet) {
+                display: inline-block;
+                margin: 20px;
+            }
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}

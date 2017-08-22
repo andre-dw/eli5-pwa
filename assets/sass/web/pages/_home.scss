@@ -1,0 +1,32 @@
+#home {
+    position: relative;
+    z-index: 1;
+
+    background-color: $footer_background;
+    .header {
+        position: relative;
+        height: 800px;
+        max-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content {
+            width: 628px;
+            max-width: calc(100vw - 30px);
+            text-align: left;
+            * {
+                text-align: left;
+                line-height: 1.2;
+            }
+            h1, h2 {
+                color: $black;
+            }
+            a {
+                font-weight: $bold;
+                img {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

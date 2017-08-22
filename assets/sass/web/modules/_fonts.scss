@@ -1,0 +1,92 @@
+html,
+body {
+    font-family: $primary_font;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+
+    color: $text_grey;
+
+    @include text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $black;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+a {
+    color: $link_color;
+    transition: $transition_time;
+    text-decoration: none;
+    font-weight: $bold;
+    &:active,
+    &:visited {
+        color: darken($link_color, 10%);
+    }
+    &:hover {
+        color: darken($link_color, 20%);
+    }
+}
+
+.text_small {
+    @include small_text;
+}
+
+.text_bold {
+    font-weight: $bold;
+}
+
+.text_medium {
+    font-weight: $regular;
+}
+
+.text_regular {
+    font-weight: $regular;
+}
+
+.text_primary {
+    color: $primary_color;
+}
+
+.text_black {
+    color: $black;
+}
+
+.text_white {
+    color: $white;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}

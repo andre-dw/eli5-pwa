@@ -1,8 +1,19 @@
 module.exports = {
+  plugins: [
+    { src: '~/plugins/headroom', ssr: false },
+    { src: '~/plugins/components', ssr: false },
+    { src: '~/plugins/aos', ssr: false },
+    { src: '~/plugins/axios.js' }
+  ],
+  css: [
+    '@/assets/sass/web.scss'
+  ],
   /*
   ** Build configuration
   */
-  build: {},
+  build: {
+    vendor: ['axios', 'vue-typer']
+  },
   /*
   ** Headers
   ** Common headers are already provided by @nuxtjs/pwa preset

@@ -1,0 +1,143 @@
+.cta-wrapper {
+	position: relative;
+	.cta {
+		background-color: $white;
+		padding-top: 150px;
+		padding-bottom: 250px;
+		transition: $transition_time;
+
+		&.hidden-block {
+			opacity: 0;
+			display: none;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			background: none;
+			padding-top: 70px;
+			padding-bottom: 80px;
+		}
+
+		.cta-content {
+			padding: 0;
+
+			.cta-header {
+				height: auto;
+				margin-bottom: 100px;
+
+				@media only screen and (max-width: $mobile) {
+					margin-bottom: 40px;
+				}
+
+				h1 {
+					margin: 0;
+					margin-bottom: 10px;
+
+					@media only screen and (max-width: $mobile) {
+						font-size: $h1;
+					}
+				}
+
+				h2 {
+					margin: 0;
+
+					@media only screen and (max-width: $mobile) {
+						font-size: $h2;
+					}
+				}
+			}
+
+			.content-wrapper {
+				.content {
+					background-color: $footer_background;
+					min-height: 370px;
+					padding: 25px 20px;
+					position: relative;
+					border-radius: 5px;
+
+					@media only screen and (max-width: $tablet) {
+						min-height: 300px;
+						margin-bottom: 30px;
+					}
+
+					>img {
+						display: block;
+						height: 50px;
+						margin-bottom: 40px;
+					}
+
+					p {
+						font-size: $h4;
+						font-weight: $semibold;
+						color: $black;
+						line-height: 38px;
+					}
+
+					a, button {
+						position: absolute;
+						left: 20px;
+						bottom: 25px;
+						font-size: $text_size_mobile;
+						background: none;
+						border: none;
+						outline: none;
+						color: $link_color;
+						font-weight: $bold;
+						transition: $transition_time;
+
+						&:active,
+						&:visited {
+							color: darken($link_color, 10%);
+						}
+
+						&:hover {
+							color: darken($link_color, 20%);
+						}
+
+						img {
+							margin-left: 10px;
+						}
+					}
+				}
+
+				.content-mobile {
+
+					a, button {
+						margin-bottom: 30px;
+						background: $white;
+						border: 1.8px solid $link_color;
+						border-radius: 4.5px;
+						height: 60px;
+						outline: none;
+						display: block;
+						color: $link_color;
+						font-weight: $bold;
+						position: relative;
+						padding: 10px 20px;
+						width: 100%;
+						text-align: left;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						padding-left:	70px;
+
+						.icon {
+							display: inline-block;
+							vertical-align: text-bottom;
+							height: calc(100% - 20px);
+							margin-right: 15px;
+							position: absolute;
+							left: 20px;
+						}
+
+						.arrow {
+							position: absolute;
+							right: 20px;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}

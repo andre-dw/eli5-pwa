@@ -1,0 +1,104 @@
+@mixin h1() {
+    font-size: $h1;
+    font-weight: $bold;
+    line-height: $h1_line;
+    @media only screen and(max-width: $tablet) {
+        font-size: $h1_mobile;
+        line-height: $h1_line_mobile;
+    }
+}
+
+@mixin h2() {
+    font-size: $h2;
+    font-weight: $semibold;
+    line-height: $h2_line;
+    @media only screen and(max-width: $tablet) {
+        font-size: $h2_mobile;
+        line-height: $h2_line_mobile;
+    }
+}
+
+@mixin h3() {
+    font-size: $h3;
+    font-weight: $semibold;
+    line-height: $h3_line;
+    @media only screen and(max-width: $tablet) {
+        font-size: $h3_mobile;
+        line-height: $h3_line_mobile;
+    }
+}
+
+@mixin h4() {
+    font-size: $h4;
+    font-weight: $semibold;
+    line-height: $h4_line;
+    @media only screen and(max-width: $tablet) {
+        font-size: $h4_mobile;
+        line-height: $h4_line_mobile;
+    }
+}
+
+@mixin h5() {
+    font-size: $h5;
+    font-weight: $semibold;
+    line-height: $h5_line;
+    @media only screen and(max-width: $tablet) {
+        font-size: $h5_mobile;
+        line-height: $h5_line_mobile;
+    }
+}
+
+@mixin text() {
+    font-size: $text_size;
+    font-weight: $regular;
+    line-height: $text_size_line;
+
+
+    @media only screen and(max-width: $tablet) {
+        font-size: $text_size_mobile;
+        line-height: $text_size_mobile_line;
+    }
+}
+
+@mixin small_text() {
+    font-size: $small_text_size;
+    font-weight: $regular;
+    line-height: $small_text_size_line;
+
+
+    @media only screen and(max-width: $tablet) {
+        font-size: $small_text_size_mobile;
+        line-height: $small_text_size_mobile_line;
+    }
+}
+
+
+@mixin link_text() {
+    font-size: $small_text_size;
+    font-weight: $bold;
+    line-height: $small_text_size_line;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $black;
+    @media only screen and(max-width: $tablet) {
+        font-size: $small_text_size_mobile;
+        line-height: $small_text_size_mobile_line;
+    }
+}
+
+@mixin truncate() {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin cover($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
