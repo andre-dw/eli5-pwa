@@ -9,6 +9,7 @@
 import app from './../components/app.vue'
 
 export default {
+	transition: 'test',
   components: {
     app
   }

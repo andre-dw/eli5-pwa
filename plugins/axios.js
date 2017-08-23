@@ -2,7 +2,7 @@ import Axios from 'axios'
 
 // Config api web
 const Api = Axios.create({
-  baseURL: 'https://www.eli5.io',
+  baseURL: '',
   withCredentials: true,
 });
 // Start progress bar

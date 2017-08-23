@@ -42,7 +42,7 @@ export default {
   	this.AOS = window.AOS
 
   	if(!window.matchMedia('(prefers-reduced-motion)').matches) {
-      AOS.init({
+      this.AOS.init({
         once: true,
         duration: 600,
       });

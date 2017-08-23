@@ -20,30 +20,39 @@
       </div>
     </div>
   </div>
-  <!-- <projects-overview :highlighted="true" ></projects-overview>
+  <projects-overview :highlighted="true" ></projects-overview>
   <div class="container projects">
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-4 link">
-        <router-link :to="{ name: 'work' }">
+        <nuxt-link :to="{ name: 'work' }">
           See all projects<img src="//cdn.prod1.eli5.io/img/icons/purple/arrow-right.svg" alt="arrow right" />
-        </router-link>
+        </nuxt-link>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Blog posts -->
-  <!-- <new-posts></new-posts> -->
+  <new-posts></new-posts>
 
   <!-- Events -->
   <!-- <events></events> -->
 
   <!-- Cta overview -->
-  <!-- <cta-overview></cta-overview> -->
+  <cta-overview></cta-overview>
 </main>
 </template>
 
 <script>
+import projectsOverview from './../components/projects.vue'
+import newPosts from './../components/new-posts.vue'
+import ctaOverview from './../components/cta.vue'
+
 export default {
+  components: {
+    projectsOverview,
+    newPosts,
+    ctaOverview
+  },
 	// layout (context) {
 	// 	console.log(context.route.query)
 	// 	if (context.route.query && context.route.query.theme === 'black') {
@@ -51,16 +60,6 @@ export default {
 	// 	}
 	// 	return 'default'
  //  },
-  head: {
-    title: {
-      inner: 'Eli5.io - A design driven tech team that solves problems.'
-    },
-    // Meta tags
-    meta: [
-      { name: 'application-name', content: 'Eli5' },
-      { name: 'description', content: 'We create cutting edge digital experiences by combining strategy, technology and design.', id: 'desc' } // id to replace intead of create element
-    ],
-  },
   data () {
   	return {
   		AOS: null,
@@ -80,7 +79,6 @@ export default {
   },
   mounted () {
   	this.AOS = window.AOS
-
   	setTimeout(() => {
       AOS.refresh()
     }, 500)
