@@ -1,0 +1,100 @@
+#services_slider {
+    position: relative;
+    @media only screen and(min-width: $tablet) {
+        height: 380px;
+    }
+    @media only screen and(max-width: $tablet) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .service {
+        padding: 0;
+        @media only screen and(min-width: $tablet) {
+            position: absolute;
+            top: 0;
+
+            transition: $transition_time;
+            transform: translate3d(0,0,0);
+            &.prev {
+                transform: translate(-100vw);
+            }
+            &.next {
+                transform: translate(100vw);
+            }
+        }
+        @media only screen and(max-width: $tablet) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        h3 {
+            margin-bottom: 0;
+
+            font-size: $h2;
+            font-weight: $semibold;
+            line-height: $h2_line;
+
+            color: $white;
+            @media only screen and(max-width: $tablet) {
+                font-size: $h2_mobile;
+                line-height: $h2_line_mobile;
+            }
+        }
+        svg {
+            max-width: 100%;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 90%;
+            margin-top: 25px;
+            @media only screen and(max-width: $tablet) {
+                max-width: 100%;
+            }
+        }
+        #iphone_gif {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .service-nav {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        padding: 0;
+        margin: 0;
+
+        transform: translateX(-50%);
+        li {
+            position: relative;
+
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 10px;
+
+            cursor: pointer;
+            transition: $transition_time;
+
+            border: 2px solid #898590;
+            border-radius: 50%;
+            background-color: transparent;
+            &.active {
+                border-color: $white;
+                background-color: $white;
+            }
+            &:after {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                bottom: -5px;
+                left: -5px;
+                z-index: 1;
+
+                display: block;
+
+                content: "";
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid.scss";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities.scss";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms.scss";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities.scss";
+
+@import "node_modules/aos/src/sass/aos.scss";
+@media screen and (prefers-reduced-motion: reduce) {
+	@import "web/modules/prevent-aos.scss";
+}
+
+// // Highlighter
+@import "web/partials/enlighter.scss";
+
+// Modules
+@import "web/modules/variables.scss";
+@import "web/modules/mixins.scss";
+@import "web/modules/backgrounds.scss";
+@import "web/modules/fonts.scss";
+@import "web/modules/paddings.scss";
+@import "web/modules/animations.scss";
+@import "web/modules/buttons.scss";
+@import "web/modules/custom.scss";
+@import "web/modules/messages.scss";
+
+// Transitions
+@import "web/transitions/fade.scss";
+@import "web/transitions/page-transition.scss";
+
+//Animations
+@import "web/animations/arrow.scss";
+@import "web/animations/loader.scss";
+
+// Partials
+@import "web/partials/footer.scss";
+@import "web/partials/headers.scss";
+@import "web/partials/navigation.scss";
+@import "web/partials/scroll-sections.scss";
+
+// Pages
+@import "web/pages/home.scss";
+@import "web/pages/about.scss";
+@import "web/pages/projects.scss";
+@import "web/pages/single-project.scss";
+@import "web/pages/party.scss";
+// @import "web/pages/services.scss";
+@import "web/pages/blogs.scss";
+@import "web/pages/careers.scss";
+@import "web/pages/not-found.scss";
+// @import "web/pages/rsvp.scss";
+@import "web/pages/landing.scss";
+@import "web/pages/noscript.scss";
+
+
+// Components
+@import "web/components/post.scss";
+@import "web/components/team.scss";
+@import "web/components/events.scss";
+@import "web/components/clients.scss";
+// @import "web/components/dribble.scss";
+@import "web/components/projects.scss";
+@import "web/components/instafeed.scss";
+@import "web/components/new-posts.scss";
+@import "web/components/blog-preview.scss";
+@import "web/components/social-share.scss";
+@import "web/components/submit-button.scss";
+@import "web/components/cta.scss";
+@import "web/components/form-modal.scss";
+@import "web/components/party-modals.scss";
+// @import "web/components/project-preview.scss";
+// @import "web/components/services-slider.scss";
+// @import "web/components/testimonial-slider.scss";

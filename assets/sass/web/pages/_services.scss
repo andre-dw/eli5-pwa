@@ -1,0 +1,83 @@
+#services_page {
+    position: relative;
+    z-index: 1;
+    .scroll-section {
+        @media only screen and(max-width: 768px) {
+            height: auto;
+            min-height: auto;
+            margin-bottom: 60px;
+        }
+        .row {
+            height: auto;
+            min-height: 100vh;
+            @media only screen and(max-width: 768px) {
+                height: auto;
+                min-height: auto;
+            }
+            &.sections {
+                img {
+                    max-width: 100%;
+                    @media only screen and(max-width: 768px) {
+                        margin-top: 150px;
+                        margin-bottom: 30px;
+                    }
+                }
+                @media only screen and(min-width: 769px) {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+            .section-wrapper {
+                display: flex;
+                height: 100vh;
+
+                background-color: $white;
+
+                align-items: center;
+                @media only screen and(max-width: 768px) {
+                    display: block;
+                    height: auto;
+                }
+                .section {
+                    padding: 0 15px;
+                    @media only screen and(max-width: 768px) {
+                        padding: 0;
+                    }
+                    h2 {
+                        @include h3;
+                    }
+                    p {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+        .is-fixed {
+            background-color: #f9f9f9;
+            @media only screen and(max-width: 768px) {
+                display: none;
+            }
+            > div {
+                position: absolute;
+
+                height: 100vh;
+
+                transition: transform 1s ease-in-out;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+
+                    max-width: 100%;
+
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+    }
+    main {
+        padding-top: 150px;
+        padding-bottom: 200px;
+    }
+}

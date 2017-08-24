@@ -1,0 +1,110 @@
+.projects {
+    h2 {
+        @include h1;
+    }
+    .link {
+        margin-bottom: 60px;
+    }
+    .project {
+        display: flex;
+        margin-bottom: 120px;
+
+        // Change order only on desktop
+        @media only screen and(min-width: #{($tablet+1)}) {
+            &:nth-of-type(odd) {
+                .project-image-wrapper {
+                    order: 0;
+                }
+                .project-details-wrapper {
+                    order: 1;
+                }
+            }
+            &:nth-of-type(even) {
+                text-align: right;
+                .project-image-wrapper {
+                    order: 1;
+                }
+                .project-details-wrapper {
+                    order: 0;
+                }
+            }
+        }
+
+        @media only screen and(max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        .project-image {
+            position: relative;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @media only screen and(max-width: $tablet) {
+                margin: 0 30px;
+                width: calc(100% - 60px);
+            }
+            &:after,
+            &:before {
+                position: relative;
+                content: '';
+                padding-top: 100%;
+                display: block;
+            }
+            &:after {
+                position: absolute;
+                z-index: -1;
+
+                top: 60px;
+                width: 100%;
+
+                background-color: $white;
+                @media only screen and(max-width: $tablet) {
+                    height: 50%;
+                    top: 50%;
+                    width: calc(100% + 60px);
+                    left: -30px;
+                }
+            }
+            &:not(.even) {
+                &:after {
+                    @media only screen and(min-width: #{($tablet+1)}) {
+                        right: 50%;
+                    }
+                }
+            }
+            &.even {
+                &:after {
+                    @media only screen and(min-width: #{($tablet+1)}) {
+                        left: 50%;
+                    }
+                }
+            }
+        }
+        .project-details-wrapper {
+            display: flex;
+            align-items: center;
+            .project-details {
+                @media only screen and(max-width: $tablet) {
+                    background-color: $white;
+                    padding: 30px 20px;
+                }
+                h2 {
+                    color: $black;
+                }
+                p {
+                    &.category {
+                        font-style: italic;
+                        color: $text_light_grey
+                    }
+                }
+                a {
+                    font-weight: $bold;
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

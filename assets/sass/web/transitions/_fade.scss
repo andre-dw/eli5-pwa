@@ -1,0 +1,8 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity $transition_time;
+}
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}

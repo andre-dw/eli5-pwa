@@ -1,0 +1,33 @@
+.contact-leave-to,
+.contact-enter {
+	transform: translateY(-45px);
+	transition: $transition_time;
+}
+
+.contact-leave-ative,
+.contact-enter-active {
+	transition: $transition_time;
+}
+
+.contact-leave,
+.contact-enter-to {
+	transform: translateY(0);
+	transition: $transition_time;
+}
+
+.navigation-leave-to,
+.navigation-enter {
+	transform: translateX(100%);
+	transition: $transition_time;
+}
+
+.navigation-leave-ative,
+.navigation-enter-active {
+	transition: $transition_time;
+}
+
+.navigation-leave,
+.navigation-enter-to {
+	transform: translateX(0);
+	transition: $transition_time;
+}
