@@ -1,7 +1,7 @@
 <template>
   <div>
     <navigation></navigation>
-    <app><nuxt /></app>
+    <app class="black"><nuxt /></app>
   </div>
 </template>
 
@@ -15,3 +15,25 @@
     }
   }
 </script>
+
+<style lang="scss">
+
+  @import './../assets/sass/web/modules/variables';
+
+  .black {
+    #post_page {
+      background-color: #11151c;
+
+      .back_link {
+        color: #f5f7e6;
+      }
+
+      #article {
+        h1, h2, h3, h4, h5, h6, span, p, b, a, li, strong {
+          color: #f5f7e6;
+        }
+      }
+    }
+  }
+
+</style>

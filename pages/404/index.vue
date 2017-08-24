@@ -31,11 +31,9 @@ export default {
       { name: 'description', content: 'We create cutting edge digital experiences by combining strategy, technology and design.', id: 'desc' } // id to replace intead of create element
     ],
   },
-	created () {
-    this.$events.emit('blackNav')
-  },
   mounted () {
 		this.$events.emit('endTransition')
+		this.$events.emit('blackNav')
 	},
   destroyed () {
     // this.$events.emit('whiteNav')

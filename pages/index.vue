@@ -53,13 +53,6 @@ export default {
     newPosts,
     ctaOverview
   },
-	// layout (context) {
-	// 	console.log(context.route.query)
-	// 	if (context.route.query && context.route.query.theme === 'black') {
-	// 		return 'black'
-	// 	}
-	// 	return 'default'
- //  },
   data () {
   	return {
   		AOS: null,

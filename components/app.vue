@@ -1,7 +1,9 @@
 <template>
 	<div id="web">
 		<navigation></navigation>
-		<slot></slot>
+    <div class="nuxt-wrapper">
+      <slot></slot>
+    </div>
 		<foot></foot>
     <foot-bottom></foot-bottom>
 	</div>
@@ -24,8 +26,7 @@ export default {
 		return {
 			AOS: null,
 			footer: null,
-      hideScroll: false,
-      aos: {}
+      hideScroll: false
 		}
 	},
   components: {

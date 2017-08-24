@@ -1,4 +1,20 @@
+const axios = require('axios')
+
 module.exports = {
+  // generate: {
+  //   interval: 300,
+  //   routes: function () {
+  //     return axios.get('https://blog.eli5.io/wp-json/wp/v2/posts?per_page=100')
+  //     .then((res) => {
+  //       return res.data.map((blog) => {
+  //         return {
+  //           route: '/blog/' + blog.slug,
+  //           payload: blog
+  //         }
+  //       })
+  //     })
+  //   }
+  // },
   router: {
     linkActiveClass: 'active'
   },
@@ -61,6 +77,5 @@ module.exports = {
   ** Modules
   */
   modules: [
-    '@nuxtjs/pwa'
   ]
 }

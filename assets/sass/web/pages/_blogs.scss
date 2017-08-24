@@ -10,6 +10,118 @@
   background-color: $footer_background;
 
   -webkit-overflow-scrolling: touch;
+
+  transition: all .3s;
+
+  &.night {
+    background-color: #11151c;
+
+    .switch {
+      input:checked + .slider {
+        background-color: #f5f7e6;
+
+        &:before {
+          background-color: #11151c;
+        }
+      }
+    }
+
+    .back_link {
+      color: #f5f7e6;
+
+      img {
+        filter: grayscale(1) invert(1);
+      }
+    }
+
+    #article {
+      h1, h2, h3, h4, h5, h6, span, p, b, li, strong {
+        color: #f5f7e6;
+      }
+
+      .EnlighterJSRAW {
+        color: #f5f7e6;
+        background-color: lighten(#11151c, 5%);
+        padding: 0 10px;
+      }
+
+      a {
+        color: $link_color;
+      }
+    }
+  }
+
+  .switch {
+    position: absolute;
+    top: 130px;
+    right: 150px;
+    width: 60px;
+    height: 34px;
+
+    .day, .night {
+      position: absolute;
+      top: 6px;
+      bottom: 6px;
+      height: 20px;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .day {
+      left: 6px;
+    }
+    .night {
+      right: 6px;
+      filter: grayscale(1) invert(1);
+    }
+
+    input {
+      display: none;
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $black;
+      -webkit-transition: .4s;
+      transition: .4s;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+    }
+
+    .round {
+      border-radius: 34px;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+
   .back_link
   {
     @media only screen and(min-width: 1240px)
