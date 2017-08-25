@@ -1,6 +1,7 @@
 <template>
 	<div id="web">
 		<navigation></navigation>
+    <modals></modals>
     <div class="nuxt-wrapper">
       <slot></slot>
     </div>
@@ -17,6 +18,7 @@ import forEach from 'lodash/forEach'
 import foot from './../components/footer.vue'
 import footBottom from './../components/footer_bottom.vue'
 import navigation from './../components/navigation.vue'
+import modals from './modals.vue'
 export default {
 	mixins:[
     require("vue-mixins/onWindowScroll"),
@@ -32,7 +34,8 @@ export default {
   components: {
     navigation,
     footBottom,
-    foot
+    foot,
+    modals
   },
   computed: {
     key () {
@@ -41,6 +44,7 @@ export default {
   },
   mounted () {
   	this.AOS = window.AOS
+    console.log(process.env.NODE_ENV)
 
   	if(!window.matchMedia('(prefers-reduced-motion)').matches) {
       this.AOS.init({

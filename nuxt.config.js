@@ -15,6 +15,7 @@ module.exports = {
   //     })
   //   }
   // },
+  dll: true,
   router: {
     linkActiveClass: 'active'
   },
@@ -23,7 +24,8 @@ module.exports = {
     { src: '~/plugins/components', ssr: false },
     { src: '~/plugins/aos', ssr: false },
     { src: '~/plugins/vanilla-tilt', ssr: false },
-    { src: '~/plugins/axios.js'}
+    { src: '~/plugins/axios.js'},
+    { src: '~/plugins/bugsnag.js', ssr: false}
   ],
   loaders: [
     {
@@ -50,7 +52,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'vue-typer', 'vue-events', 'vue-moment', 'vue-touch'],
+    vendor: ['axios', 'vue-typer', 'vue-events', 'vue-moment', 'vue-touch', 'vue-analytics', 'bugsnag-js'],
   },
   /*
   ** Headers
@@ -66,7 +68,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#6B39CD' },
   /*
   ** Customize app manifest
   */
@@ -77,5 +79,6 @@ module.exports = {
   ** Modules
   */
   modules: [
+    ['@nuxtjs/google-analytics', { ua: 'UA-79194318-1' }]
   ]
 }
