@@ -4,8 +4,8 @@
     <div class="blog">
       <main id="post_page" class="content" :class="{ 'night': night }">
         <label class="switch">
-          <img v-if="night" class="day" src="~/assets/img/icons/wheater/summer.svg" alt="Day time">
-          <img v-if="!night" class="night" src="~/assets/img/icons/wheater/night.svg" alt="Night time">
+          <img v-if="night" class="day" src="~/assets/img/icons/wheater/sun.svg" alt="Day time">
+          <img v-if="!night" class="night" src="~/assets/img/icons/wheater/moon.svg" alt="Night time">
           <input ref="toggle" type="checkbox" @change="layoutSwitcher">
           <span class="slider round"></span>
         </label>
@@ -79,6 +79,7 @@
 import { Axios } from '~/plugins/axios'
 import size from 'lodash/size'
 import forEach from 'lodash/forEach'
+import SunCalc from 'suncalc'
 
 // Components
 import notFound from './../404/index.vue'
@@ -121,7 +122,7 @@ export default {
       return this.$store.getters.isMobile
     },
     isNight () {
-      return (new Date()).getHours() >= 16
+      return (new Date() >= SunCalc.getTimes(new Date(), 52.132633, 5.291266).sunset && new Date() <= SunCalc.getTimes(new Date(), 52.132633, 5.291266).sunrise)
     }
   },
   head () {
@@ -144,12 +145,6 @@ export default {
       ]
     }
   },
-  // layout (context) {
-  //   if(context.route.query && context.route.query.theme === 'black') {
-  //     return 'black'
-  //   }
-  //   return 'default'
-  // },
   mounted () {
     this.location = window.location.href
     this.$events.emit('whiteNav')
@@ -159,6 +154,9 @@ export default {
     })
     this.loading = false
     this.footer = document.getElementById('blog_preview')
+    this.$nextTick(() => {
+      this.nightTime()
+    })
   },
   methods: {
     layoutSwitcher () {

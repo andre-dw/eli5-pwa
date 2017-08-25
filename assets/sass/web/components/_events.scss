@@ -2,7 +2,7 @@
 	position: relative;
 	background-color: $footer_background;
 	.background {
-		@include cover('/img/components/events/background.jpg');
+		@include cover('~/assets/img/components/events/background.jpg');
 		@media only screen and(min-width: #{($tablet+1)}) {
 			position: absolute;
 			height: 100%;

@@ -8,15 +8,11 @@
 		border-radius: 5px;
 		position: relative;
 
-		svg {
+		img {
 			position: absolute;
-			left: 15px;
+			left: 20px;
 			top: 50%;
 			transform: translateY(-50%);
-
-			g {
-				fill: #3a3a3a;
-			}
 		}
 
 		.error-message-title, .success-message-title {
